@@ -1,0 +1,17 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font-regular {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
