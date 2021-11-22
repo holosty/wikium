@@ -1,0 +1,30 @@
+{
+  "name": "wikium",
+  "version": "1.0.0",
+  "description": "Тестовое задание",
+  "devDependencies": {
+    "autoprefixer": "10.4.0",
+    "browser-sync": "2.27.7",
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-sass": "5.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "postcss": "8.3.11",
+    "postcss-csso": "5.0.1",
+    "stylelint": "14.1.0"
+  },
+  "scripts": {
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run stylelint",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "homepage": "https://github.com/holosty/wikium#readme"
+}
