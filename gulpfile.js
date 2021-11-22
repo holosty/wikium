@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
@@ -33,6 +33,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    directory: true
   });
   done();
 }
