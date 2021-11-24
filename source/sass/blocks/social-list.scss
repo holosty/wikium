@@ -1,0 +1,36 @@
+.social-list {
+  @include reset-list;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  &__link {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+
+    &--vk {
+      width: 41px;
+      height: 40px;
+    }
+
+    &--fb {
+      width: 42px;
+      height: 40px;
+    }
+
+    &--mail {
+      width: 42px;
+      height: 40px;
+    }
+
+    &--google {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.back-link {
+  position: relative;
+  display: block;
+  color: $grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 7px;
+    height: 12px;
+    background-image: url("../img/arrow-out.svg");
+    background-size: 7px 12px;
+  }
+}

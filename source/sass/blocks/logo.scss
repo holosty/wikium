@@ -1,0 +1,13 @@
+.logo {
+  background-color: transparent;
+
+  &__link {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+    width: 98px;
+    height: 29px;
+  }
+}

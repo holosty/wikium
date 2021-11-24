@@ -3,4 +3,21 @@
 @import "global/mixin.scss";
 @import "global/normalize.scss";
 @import "global/fonts.scss";
+@import "global/variables.scss";
 @import "global/global.scss";
+@import "global/body.scss";
+@import "global/container.scss";
+
+// Blocks
+
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/nav.scss";
+@import "blocks/back-link.scss";
+@import "blocks/authorization.scss";
+@import "blocks/form.scss";
+@import "blocks/input.scss";
+@import "blocks/label.scss";
+@import "blocks/link.scss";
+@import "blocks/button.scss";
+@import "blocks/social-list.scss";

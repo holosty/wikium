@@ -1,0 +1,51 @@
+.label {
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media(min-width: $tablet) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &--email::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 16px;
+    width: 20px;
+    height: 16px;
+    background-image: url("../img/email.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+  }
+
+  &--checkbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -34px;
+    bottom: 0;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $light-grey;
+    border-radius: 4px;
+  }
+}
+
+.input-checkbox:checked + .label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -31px;
+  margin: auto;
+  width: 12px;
+  height: 9px;
+  background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 9px;
+  background-position: center;
+}

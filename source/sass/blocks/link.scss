@@ -1,0 +1,10 @@
+.link {
+  font-size: 12px;
+  line-height: 16px;
+  color: $blue;
+
+  @media(min-width: $tablet) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
