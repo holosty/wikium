@@ -1,0 +1,29 @@
+.progress-list {
+  display: none;
+
+  @media(min-width: $tablet) {
+    @include reset-list;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding-bottom: 10px;
+    min-width: 438px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--bar {
+    @media(min-width: $tablet) {
+      border-bottom: 2px solid $color-bar;
+    }
+  }
+
+  &__item {
+    &--active {
+      color: $light-black;
+    }
+  }
+}

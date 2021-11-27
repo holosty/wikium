@@ -1,0 +1,13 @@
+.offer-title {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+
+  br {
+    @media(min-width: $tablet) {
+      display: none;
+    }
+  }
+}

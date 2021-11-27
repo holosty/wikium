@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Авторизация</title>
-  <meta name="description" content="Авторизация для пользователей">
+  <title>Регистрация пользователя</title>
+  <meta name="description" content="Регистрация для пользователей">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -23,35 +23,30 @@
         </a>
       </div>
 
+      <ul class="progress-list progress-list--bar">
+        <li class="progress-list__item progress-list__item--active">Знакомство</li>
+        <li class="progress-list__item">Тестирование</li>
+        <li class="progress-list__item">Создание индивидуальной программы</li>
+      </ul>
+
       <nav class="nav">
-        <a class="nav__link back-link" href="#">Назад</a>
+        <a class="change-link" href="#">Сменить аккаунт</a>
       </nav>
     </div>
   </header>
   <main>
     <div class="container">
-      <section class="authorization">
-        <div class="authorization__inner">
-          <h1 class="authorization__heading">Вход на сайт</h1>
+      <section class="registration">
+        <div class="registration__inner">
+          <h1 class="registration__heading">Зарегистрируйтесь<br> и пройдите тестирование</h1>
 
           <form class="form" action="#" method="post" target="_blank">
             <label class="visually-hidden" for="email">Электронная почта</label>
-            <input class="form__input input input--email" type="email" name="email" id="email" autocomplete="off" placeholder="Введите ваш E-mail">
-            <label class="visually-hidden" for="password">Пароль</label>
-            <input class="form__input form__input--indent input input--password" type="password" name="password" id="password" placeholder="Введите ваш пароль">
-            <div class="form__inner">
-              <div class="form__box">
-                <input class="input-checkbox visually-hidden" type="checkbox" name="remember" id="remember">
-                <label class="label label--checkbox" for="remember">Запомнить меня</label>
-              </div>
-              <a class="link" href="#">Забыли пароль</a>
-            </div>
-            <button class="authorization__button-theme button" type="submit">Войти</button>
+            <input class="form__input form__input--indent input input--registration input--email" type="email" name="email" id="email" autocomplete="off" placeholder="Введите ваш E-mail">
+            <button class="registration__button-theme button" type="submit">Зарегистрироваться</button>
           </form>
 
-          <p class="authorization__text">
-            Новый пользователь? <a href="registration.html" class="link">Зарегистрируйтесь</a> и начните заниматься своим мозгом прямо сейчас. Или войдите с помощью социальных сетей.
-          </p>
+          <p class="registration__text">или войдите с помощью<br> социальных сетей</p>
 
           <ul class="social-list">
             <li class="social-list__item">
@@ -72,16 +67,11 @@
                 <span class="visually-hidden">Войти через аккаунт Мэйлру</span>
               </a>
             </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">
-                <img class="social-list__img social-list__img--google" src="img/google.svg" aria-hidden="true" focusable="false" width="40" height="40" alt="Логотип Гугл.">
-                <span class="visually-hidden">Войти через аккаунт Гугл</span>
-              </a>
-            </li>
           </ul>
 
         </div>
       </section>
+      <p class="offer-title">Регистрируясь, вы принимаете условия<br> <a class="link link--size-m" href="#">лицензионного договора</a></p>
     </div>
   </main>
 </body>

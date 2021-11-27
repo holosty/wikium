@@ -1,4 +1,4 @@
-.authorization {
+.registration {
   max-width: 413px;
   margin: 0 auto;
   background-color: $white;
@@ -6,43 +6,47 @@
   border-radius: 4px;
 
   &__inner {
-    margin-bottom: 43px;
-    padding: 30px 16px 50px;
+    margin-bottom: 20px;
+    padding: 30px 16px 40px;
 
     @media(min-width: $tablet) {
       padding-right: 24px;
       padding-left: 24px;
+      padding-bottom: 50px;
     }
   }
 
   &__heading {
     margin-top: 0;
-    margin-bottom: 50px;
-    font-size: 21px;
+    margin-bottom: 28px;
+    font-size: 18px;
     font-weight: normal;
-    line-height: 29px;
+    line-height: 25px;
     color: $light-black;
     text-align: center;
-
-    @media(min-width: $tablet) {
-      margin-bottom: 48px;
-    }
   }
 
   &__text {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 12px;
     line-height: 19px;
     text-align: center;
 
     @media(min-width: $tablet) {
+      margin-bottom: 30px;
       font-size: 14px;
+    }
+
+    br {
+      @media(min-width: $tablet) {
+        display: none;
+      }
     }
   }
 
   &__button-theme {
-    margin-bottom: 30px;
+    margin-bottom: 21px;
     color: $white;
     background-color: $purple;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1),
