@@ -1,0 +1,100 @@
+.test {
+  max-width: 722px;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+
+  &__inner {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 28px;
+    padding: 30px 14px 60px 16px;
+    gap: 30px;
+
+    @media(min-width: $tablet) {
+      flex-direction: row;
+      gap: 46px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 115px;
+    height: 106px;
+
+    @media(min-width: $tablet) {
+      width: 158px;
+      height: 145px;
+    }
+  }
+
+  &__wrapper {
+    text-align: center;
+
+    @media(min-width: $tablet) {
+      text-align: left;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: $light-black;
+
+    @media(min-width: $tablet) {
+      font-size: 21px;
+      line-height: 29px;
+    }
+
+    br {
+      @media(min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 19px;
+
+    &--indent-m {
+      margin-bottom: 19px;
+    }
+
+    &--indent-xl {
+      margin-bottom: 30px;
+    }
+
+    br:nth-child(1) {
+      @media(min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__button-theme {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 165px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $white;
+    background-color: $purple;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1),
+                0px 2px 4px rgba(0, 0, 0, 0.5);
+
+    @media(min-width: $tablet) {
+      padding-top: 17px;
+      padding-bottom: 17px;
+      width: 262px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

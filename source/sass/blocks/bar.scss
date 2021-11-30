@@ -1,0 +1,8 @@
+.bar {
+  width: 16%;
+  height: 2px;
+
+  &--theme-purple {
+    background-color: $purple;
+  }
+}

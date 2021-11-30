@@ -4,4 +4,26 @@
   line-height: 14px;
   color: $light-black;
   text-transform: uppercase;
+
+  &--button {
+    display: block;
+    padding: 8px 0;
+    width: 80px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1),
+                0px 2px 4px rgba(0, 0, 0, 0.5);
+
+    @media(min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &--display {
+    display: none;
+
+    @media(min-width: $tablet) {
+      display: block;
+    }
+  }
 }
