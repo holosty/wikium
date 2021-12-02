@@ -1,0 +1,59 @@
+.skill {
+  background-color: transparent;
+
+  &__inner {
+    margin-bottom: 46px;
+
+    @media(min-width: $tablet) {
+      margin-right: auto;
+      margin-left: auto;
+      width: 472px;
+    }
+
+    @media(min-width: $desktop) {
+      width: 721px;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: $light-black;
+
+    @media(min-width: $tablet) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &--theme-orange {
+      color: $orange;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 19px;
+
+    @media (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__form {
+    background-color: transparent;
+  }
+
+  &__button {
+    width: 184px;
+
+    @media(max-width: $max-mobile) {
+      width: 117px;
+    }
+  }
+}

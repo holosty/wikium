@@ -77,24 +77,4 @@
       }
     }
   }
-
-  &__button-theme {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 165px;
-    font-size: 10px;
-    line-height: 14px;
-    color: $white;
-    background-color: $purple;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1),
-                0px 2px 4px rgba(0, 0, 0, 0.5);
-
-    @media(min-width: $tablet) {
-      padding-top: 17px;
-      padding-bottom: 17px;
-      width: 262px;
-      font-size: 16px;
-      line-height: 22px;
-    }
-  }
 }

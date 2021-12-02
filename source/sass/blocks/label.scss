@@ -8,6 +8,11 @@
     line-height: 19px;
   }
 
+  &--checkbox {
+    display: flex;
+    align-items: center;
+  }
+
   &--email::after {
     content: "";
     position: absolute;
@@ -33,6 +38,10 @@
     border: 2px solid $light-grey;
     border-radius: 4px;
   }
+
+  &--position::before {
+    left: 16px;
+  }
 }
 
 .input-checkbox:checked + .label--checkbox::after {
@@ -48,4 +57,9 @@
   background-repeat: no-repeat;
   background-size: 12px 9px;
   background-position: center;
+}
+
+.input-checkbox:checked + .label--position::after {
+  left: 19px;
+  background-image: url("../img/checkbox-green.svg");
 }

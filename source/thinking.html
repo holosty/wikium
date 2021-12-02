@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Base Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Развитие навыков мышления</title>
+  <meta name="description" content="Выберите необходимы навыки мышления и в путь!">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Развитие навыков мышления"/>
+  <meta property="og:description" content="Выберите необходимы навыки мышления и в путь!"/>
+  <meta property="og:image" content="img/logo.svg"/>
+  <meta property="og:type" content="type"/>
+  <meta property="og:url" content= "thinking.html"/>
+  <!-- FFS (Favicon, Fonts, Style) -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <a class="logo__link" href="#">
+          <img class="logo__img" src="img/logo.svg" width="98" height="29" alt="Логотип Викиум в виде мозга с разноцветными частями.">
+        </a>
+      </div>
+
+      <div class="header__inner--position progress">
+        <ul class="progress__list progress-list progress-list--bar">
+          <li class="progress-list__item progress-list__item--active">Знакомство</li>
+          <li class="progress-list__item">Тестирование</li>
+          <li class="progress-list__item">Создание индивидуальной программы</li>
+        </ul>
+
+        <div class="progress__bar">
+          <div class="bar bar--theme-purple"></div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="change-link change-link--button" href="#">Войти</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="skill">
+        <div class="skill__inner">
+            <h1 class="skill__heading">Какие навыки <span class="skill__heading--theme-orange">мышления</span> вы хотели бы развить?</h1>
+            <p class="skill__text">Можно выбрать несколько вариантов ответов</p>
+
+            <form class="skill__form form" action="#" method="post" target="_blank">
+              <ul class="form__list">
+                <li class="form__list-item form__list-item--quickly">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="find-quickly" id="quickly">
+                  <label class="form__label form__label--theme label label--checkbox label--position" for="quickly">Быстро находить решение проблем и задач</label>
+                </li>
+                <li class="form__list-item form__list-item--thoughts">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="express-thoughts" id="thoughts">
+                  <label class="form__label form__label--theme label label--checkbox label--position" for="thoughts">Красиво и грамотно излагать свои мысли</label>
+                </li>
+                <li class="form__list-item form__list-item--calculations">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="mental-calculations" id="calculations">
+                  <label class="form__label form__label--theme label label--checkbox label--position" for="calculations">Мгновенно выполнять простые вычисления в уме</label>
+                </li>
+                <li class="form__list-item form__list-item--creatively">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="think-creatively" id="creatively">
+                  <label class="form__label form__label--theme label label--checkbox label--position" for="creatively">Способность мыслить креативно и творчески подходить к решению задач</label>
+                </li>
+              </ul>
+              <button class="skill__button button button--small button--theme-purple button--position" type="submit">Продолжить</button>
+            </form>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

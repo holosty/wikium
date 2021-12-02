@@ -20,4 +20,154 @@
   &__box {
     padding-left: 34px;
   }
+
+  &__list {
+    @include reset-list;
+    margin-bottom: 20px;
+
+    @media(min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    margin-bottom: 12px;
+    background-color: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+
+    &--quickly::before {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: 30px;
+        left: -100px;
+        content: "";
+        width: 69px;
+        height: 70px;
+        background-image: url("../img/quickly.svg");
+        background-repeat: no-repeat;
+        background-size: 69px 70px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+      }
+
+      @media(min-width: $desktop) {
+        top: 20px;
+      }
+    }
+
+    &--thoughts::before {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: 145px;
+        left: -100px;
+        content: "";
+        width: 74px;
+        height: 71px;
+        background-image: url("../img/thoughts.svg");
+        background-repeat: no-repeat;
+        background-size: 74px 71px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+      }
+
+      @media(min-width: $desktop) {
+        top: 107px;
+      }
+    }
+
+    &--calculations::after {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: -150px;
+        right: -100px;
+        content: "";
+        width: 64px;
+        height: 70px;
+        background-image: url("../img/calculations.svg");
+        background-repeat: no-repeat;
+        background-size: 64px 70px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+
+      @media(min-width: $desktop) {
+        top: -120px;
+      }
+    }
+
+    &--creatively::after {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: -40px;
+        right: -100px;
+        content: "";
+        width: 69px;
+        height: 69px;
+        background-image: url("../img/creatively.svg");
+        background-repeat: no-repeat;
+        background-size: 69px 69px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  &__label {
+    min-height: 60px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    padding-left: 50px;
+    border-radius: 4px;
+
+    @media(min-width: $tablet) {
+      min-height: 80px;
+    }
+
+    @media(min-width: $desktop) {
+      min-height: 60px;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $green;
+
+      &::before {
+        border: 2px solid $white;
+      }
+    }
+
+    &--theme {
+      color: $light-black;
+    }
+  }
+}
+
+.input-checkbox:checked + .form__label {
+  color: $white;
+  background-color: $green;
+}
+
+.input-checkbox:checked + .form__label::before {
+  background-color: $white;
+  border: 2px solid $white;
+}
+
+.form__list-item--quickly:hover::before,
+.form__list-item--thoughts:hover::before,
+.form__list-item--calculations:hover::after,
+.form__list-item--creatively:hover::after {
+  @media(min-width: $tablet) {
+    opacity: 1;
+    transform: rotate(0deg) scale(1.2);
+  }
 }

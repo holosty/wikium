@@ -9,4 +9,29 @@
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
+
+  &--small {
+    @media (max-width: $max-mobile) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      width: 165px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &--theme-purple {
+    color: $white;
+    background-color: $purple;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1),
+                0px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  &--position {
+    @media(max-width: $max-mobile) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
