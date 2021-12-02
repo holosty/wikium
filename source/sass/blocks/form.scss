@@ -120,6 +120,78 @@
         transition: transform 0.3s;
       }
     }
+
+    &--speed::before {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: 20px;
+        left: -105px;
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-image: url("../img/speed.svg");
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+      }
+    }
+
+    &--remember::before {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: 105px;
+        left: -105px;
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-image: url("../img/remember.svg");
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+      }
+    }
+
+    &--better::after {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: -120px;
+        right: -105px;
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-image: url("../img/better.svg");
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+    }
+
+    &--forgetfulness::after {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: -40px;
+        right: -105px;
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-image: url("../img/forgetfulness.svg");
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+    }
   }
 
   &__label {
@@ -165,7 +237,11 @@
 .form__list-item--quickly:hover::before,
 .form__list-item--thoughts:hover::before,
 .form__list-item--calculations:hover::after,
-.form__list-item--creatively:hover::after {
+.form__list-item--creatively:hover::after,
+.form__list-item--speed:hover::before,
+.form__list-item--remember:hover::before,
+.form__list-item--better:hover::after,
+.form__list-item--forgetfulness:hover::after {
   @media(min-width: $tablet) {
     opacity: 1;
     transform: rotate(0deg) scale(1.2);
