@@ -192,6 +192,98 @@
         transition: transform 0.3s;
       }
     }
+
+    &--distracted::before {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: 20px;
+        left: -120px;
+        content: "";
+        width: 120px;
+        height: 120px;
+        background-image: url("../img/distracted.svg");
+        background-repeat: no-repeat;
+        background-size: 120px 120px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+
+        @media(min-width: $desktop) {
+          top: -20px;
+          left: -130px;
+        }
+      }
+    }
+
+    &--switch::before {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: 120px;
+        left: -120px;
+        content: "";
+        width: 110px;
+        height: 110px;
+        background-image: url("../img/switch.svg");
+        background-repeat: no-repeat;
+        background-size: 110px 110px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+
+        @media(min-width: $desktop) {
+          top: 90px;
+          left: -130px;
+        }
+      }
+    }
+
+    &--hold::after {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: -165px;
+        right: -130px;
+        content: "";
+        width: 110px;
+        height: 110px;
+        background-image: url("../img/hold.svg");
+        background-repeat: no-repeat;
+        background-size: 110px 110px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+
+      @media(min-width: $desktop) {
+        top: -155px;
+        right: -140px;
+      }
+    }
+
+    &--information::after {
+      @media(min-width: $tablet) {
+        position: absolute;
+        top: -50px;
+        right: -130px;
+        content: "";
+        width: 110px;
+        height: 110px;
+        background-image: url("../img/information.svg");
+        background-repeat: no-repeat;
+        background-size: 110px 110px;
+        background-position: center;
+        opacity: 0.3;
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+      }
+
+      @media(min-width: $desktop) {
+        top: -55px;
+        right: -140px;
+      }
+    }
   }
 
   &__label {
@@ -241,7 +333,11 @@
 .form__list-item--speed:hover::before,
 .form__list-item--remember:hover::before,
 .form__list-item--better:hover::after,
-.form__list-item--forgetfulness:hover::after {
+.form__list-item--forgetfulness:hover::after,
+.form__list-item--distracted:hover::before,
+.form__list-item--switch:hover::before,
+.form__list-item--hold:hover::after,
+.form__list-item--information:hover::after {
   @media(min-width: $tablet) {
     opacity: 1;
     transform: rotate(0deg) scale(1.2);
