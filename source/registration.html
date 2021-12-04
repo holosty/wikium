@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Регистрация пользователя</title>
   <meta name="description" content="Регистрация для пользователей">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Регистрация пользователя"/>
+  <meta property="og:description" content="Регистрация для пользователей."/>
+  <meta property="og:image" content="img/logo.svg"/>
+  <meta property="og:type" content="type"/>
+  <meta property="og:url" content= "registration.html"/>
+
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -48,7 +55,7 @@
 
           <form class="form" action="#" method="post" target="_blank">
             <label class="visually-hidden" for="email">Электронная почта</label>
-            <input class="form__input form__input--indent input input--registration input--email" type="email" name="email" id="email" autocomplete="off" placeholder="Введите ваш E-mail">
+            <input class="form__input form__input--indent input input--registration input--email" type="email" name="email" id="email" autocomplete="off" placeholder="Введите ваш E-mail" required>
             <button class="registration__button-theme button" type="submit">Зарегистрироваться</button>
           </form>
 

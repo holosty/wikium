@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Авторизация</title>
   <meta name="description" content="Авторизация для пользователей">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Авторизация"/>
+  <meta property="og:description" content="Авторизация для пользователей."/>
+  <meta property="og:image" content="img/logo.svg"/>
+  <meta property="og:type" content="type"/>
+  <meta property="og:url" content= "authorization.html"/>
+
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -34,11 +41,11 @@
         <div class="authorization__inner">
           <h1 class="authorization__heading">Вход на сайт</h1>
 
-          <form class="form" action="#" method="post" target="_blank">
+          <form class="form" action="#" method="post" target="_blank" autocomplete="off">
             <label class="visually-hidden" for="email">Электронная почта</label>
-            <input class="form__input input input--email" type="email" name="email" id="email" autocomplete="off" placeholder="Введите ваш E-mail">
+            <input class="form__input input input--email" type="email" name="email" id="email" placeholder="Введите ваш E-mail" required>
             <label class="visually-hidden" for="password">Пароль</label>
-            <input class="form__input form__input--indent input input--password" type="password" name="password" id="password" placeholder="Введите ваш пароль">
+            <input class="form__input form__input--indent input input--password" type="password" name="password" id="password" placeholder="Введите ваш пароль" required>
             <div class="form__inner">
               <div class="form__box">
                 <input class="input-checkbox visually-hidden" type="checkbox" name="remember" id="remember">
