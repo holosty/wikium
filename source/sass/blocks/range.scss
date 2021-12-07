@@ -1,0 +1,172 @@
+.range {
+  position: relative;
+
+  &--indent {
+    padding-bottom: 3px;
+
+    @media(min-width: $tablet) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--done::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 18px;
+    height: 13px;
+    background-image: url("../img/tick-green.svg");
+    background-repeat: no-repeat;
+    background-size: 18px 13px;
+    background-position: center;
+
+    @media(min-width: $tablet) {
+      bottom: 41px;
+      right: 70px;
+    }
+  }
+
+  &--warn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/note-red.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+
+    @media(min-width: $tablet) {
+      bottom: 37px;
+      right: 70px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(min-width: $tablet) {
+      flex-direction: column;
+      padding-top: 19px;
+    }
+  }
+
+  &__scale {
+    border-bottom: 4px solid $color-bar;
+
+    @media(min-width: $tablet) {
+      width: 160px;
+      height: 161px;
+      border-radius: 50%;
+    }
+
+    &--theme-blue {
+      border-bottom: 4px solid fade-out($blue-scale, 0.8);
+
+      @media(min-width: $tablet) {
+        border: 17px solid fade-out($blue-scale, 0.8);
+      }
+    }
+
+    &--theme-green {
+      border-bottom: 4px solid fade-out($light-green, 0.8);
+
+      @media(min-width: $tablet) {
+        border: 17px solid fade-out($light-green, 0.8);
+      }
+    }
+
+    &--theme-orange {
+      border-bottom: 4px solid fade-out($orange, 0.8);
+
+      @media(min-width: $tablet) {
+        border: 17px solid fade-out($orange, 0.8);
+      }
+    }
+  }
+
+  &__selected {
+
+    &--mobile {
+      @media(max-width: $max-mobile) {
+        margin-bottom: -7px;
+        width: 24%;
+        border-bottom: 10px solid $color-bar;
+      }
+
+      &-blue {
+        @media(max-width: $max-mobile) {
+          border-bottom: 10px solid $blue-scale;
+        }
+      }
+
+      &-green {
+        @media(max-width: $max-mobile) {
+          border-bottom: 10px solid $light-green;
+        }
+      }
+
+      &-orange {
+        @media(max-width: $max-mobile) {
+          border-bottom: 10px solid $orange;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 14px;
+    line-height: 29px;
+  }
+
+  &__result {
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    color: $light-black;
+
+    @media(min-width: $tablet) {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+  &__svg {
+    display: none;
+
+    @media(min-width: $tablet) {
+      display: block;
+      position: absolute;
+      top: -6px;
+      left: 82px;
+      width: 88px;
+      height: 144px;
+    }
+
+    &--blue {
+      & path {
+        fill: $blue-scale;
+      }
+    }
+
+    &--green {
+      & path {
+        fill: $light-green;
+      }
+    }
+
+    &--orange {
+      & path {
+        fill: $orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.result {
+  max-width: 722px;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 0.06);
+  border-radius: 4px;
+
+  &__wrapper {
+    padding: 30px 6px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    color: $light-black;
+
+    @media(min-width: $tablet) {
+      margin-bottom: 50px;
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+
+  &__data {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media(min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+      margin-bottom: 42px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+  }
+
+  &__data-info {
+    margin-bottom: 20px;
+    padding-right: 34px;
+
+    @media(min-width: $tablet) {
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin: 0 10px 20px;
+    padding: 10px 18px 15px 16px;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: $light-black;
+    text-align: left;
+    background-color: $smoke;
+    border-radius: 4px;
+
+    &::before {
+      @media(min-width: $tablet) {
+        content: "";
+        position: absolute;
+        top: 23px;
+        left: 24px;
+        width: 53px;
+        height: 53px;
+        background-image: url("../img/note.svg");
+        background-repeat: no-repeat;
+        background-size: 53px 53px;
+        background-position: center;
+      }
+    }
+
+    & b {
+      font-weight: bold;
+    }
+
+    @media(min-width: $tablet) {
+      margin-bottom: 40px;
+      margin-left: 18px;
+      margin-right: 18px;
+      padding: 25px 66px 24px 101px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  &__inner {
+    @media(min-width: $tablet) {
+      display: flex;
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+  }
+
+  &__info {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+
+    @media(min-width: $tablet) {
+      display: block;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}

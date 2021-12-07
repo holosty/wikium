@@ -34,4 +34,10 @@
       margin: 0 auto;
     }
   }
+
+  &--size-xl {
+    @media(min-width: $tablet) {
+      max-width: 262px;
+    }
+  }
 }
