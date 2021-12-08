@@ -7,6 +7,7 @@ const rename = require("gulp-rename");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const htmlmin = require("gulp-htmlmin");
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
 const sync = require("browser-sync").create();
