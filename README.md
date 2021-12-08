@@ -14,3 +14,9 @@
 Запускаем сборку и браузер
 
 `npm run start` или `npm run build`
+
+---
+
+## Готовая сборка
+
+https://holosty.github.io/wikium/
