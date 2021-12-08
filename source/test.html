@@ -19,13 +19,13 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
       <div class="logo">
-        <a class="logo__link" href="#">
+        <a class="logo__link" href="index.html">
           <img class="logo__img" src="img/logo.svg" width="98" height="29" alt="Логотип Викиум в виде мозга с разноцветными частями.">
         </a>
       </div>
@@ -43,8 +43,8 @@
       </div>
 
       <nav class="nav">
-        <a class="change-link change-link--button change-link--mobile" href="#">Войти</a>
-        <a class="change-link change-link--display" href="#">Сменить аккаунт</a>
+        <a class="change-link change-link--button change-link--mobile" href="authorization.html">Войти</a>
+        <a class="change-link change-link--display" href="authorization.html">Сменить аккаунт</a>
       </nav>
     </div>
   </header>
@@ -53,6 +53,9 @@
       <section class="test">
         <div class="test__inner">
           <picture>
+            <source media="(min-width: 768px)" srcset="img/professor-tablet.webp 1x, img/professor-tablet@2x.webp 2x" type="image/webp">
+            <source srcset="img/professor-mobile.webp 1x, img/professor-mobile@2x.webp 2x" type="image/webp">
+
             <source media="(min-width: 768px)" srcset="img/professor-tablet.png 1x, img/professor-tablet@2x.png 2x">
             <img class="test__img" src="img/professor-mobile.png" srcset="img/professor-mobile@2x.png" width="115" height="106" alt="Профессор в очках со списком заданий.">
           </picture>

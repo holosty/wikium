@@ -1,0 +1,38 @@
+.page {
+  &--theme-sky {
+    background: linear-gradient(135deg, $purple 0%, $green 100%) no-repeat;
+  }
+
+  &__title {
+    font-size: 31px;
+    line-height: 39px;
+    color: $white;
+    text-align: center;
+  }
+
+  &__list {
+    @include reset-list;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 486px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  &__item-link {
+    display: block;
+    padding: 15px 10px;
+    font-weight: 300;
+    color: $light-black;
+
+    &:hover,
+    &:focus {
+      font-weight: normal;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
