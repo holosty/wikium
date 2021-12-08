@@ -1,14 +1,13 @@
 .progress-list {
   display: none;
 
-  @media(min-width: $tablet) {
+  @media (min-width: $tablet) {
     @include reset-list;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin-bottom: 10px;
-
     font-size: 12px;
     line-height: 16px;
   }

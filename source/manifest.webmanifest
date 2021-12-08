@@ -5,6 +5,8 @@
     { "src": "img/favicon/maskable_icon.png", "type": "image/png", "sizes": "1024x1024", "purpose": "maskable"}
   ],
   "background_color": "#f7f5fa",
-  "theme_color": "#f7f5fa",
-  "name": "Wikium"
+  "theme_color": "#32d6bd",
+  "name": "Wikium",
+  "display": "minimal-ui",
+  "start_url": "../index.html"
 }

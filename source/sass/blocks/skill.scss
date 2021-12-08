@@ -4,13 +4,13 @@
   &__inner {
     margin-bottom: 46px;
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       margin-right: auto;
       margin-left: auto;
       width: 472px;
     }
 
-    @media(min-width: $desktop) {
+    @media (min-width: $desktop) {
       width: 721px;
     }
   }
@@ -23,7 +23,7 @@
     font-weight: bold;
     color: $light-black;
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       font-size: 24px;
       line-height: 28px;
     }
@@ -60,7 +60,7 @@
   &__button {
     width: 184px;
 
-    @media(max-width: $max-mobile) {
+    @media (max-width: $max-mobile) {
       width: 117px;
     }
   }

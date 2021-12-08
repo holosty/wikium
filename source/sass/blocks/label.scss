@@ -4,7 +4,7 @@
   line-height: 16px;
   cursor: pointer;
 
-  @media(min-width: $tablet) {
+  @media (min-width: $tablet) {
     font-size: 14px;
     line-height: 19px;
   }
@@ -17,7 +17,7 @@
   &--email::after {
     content: "";
     position: absolute;
-    top: 0px;
+    top: 0;
     bottom: 0;
     left: 16px;
     width: 20px;

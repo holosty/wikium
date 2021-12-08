@@ -6,7 +6,7 @@
   text-align: center;
 
   br {
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       display: none;
     }
   }

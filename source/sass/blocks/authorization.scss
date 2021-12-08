@@ -2,14 +2,14 @@
   max-width: 413px;
   margin: 0 auto;
   background-color: $white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
 
   &__inner {
     margin-bottom: 43px;
     padding: 30px 16px 50px;
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       padding-right: 24px;
       padding-left: 24px;
     }
@@ -24,7 +24,7 @@
     color: $light-black;
     text-align: center;
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       margin-bottom: 48px;
     }
   }
@@ -36,7 +36,7 @@
     line-height: 19px;
     text-align: center;
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       font-size: 14px;
     }
   }
@@ -45,7 +45,6 @@
     margin-bottom: 30px;
     color: $white;
     background-color: $purple;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1),
-      0px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 }

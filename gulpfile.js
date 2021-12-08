@@ -1,81 +1,82 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass")(require('sass'));
-const postcss = require("gulp-postcss");
-const rename = require("gulp-rename");
-const autoprefixer = require("autoprefixer");
-const csso = require("postcss-csso");
-const htmlmin = require("gulp-htmlmin");
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const del = require("del");
-const sync = require("browser-sync").create();
+import gulp from "gulp";
+import plumber from "gulp-plumber";
+import sourcemap from "gulp-sourcemaps";
+import sass from "gulp-dart-sass";
+import postcss from "gulp-postcss";
+import rename from "gulp-rename";
+import autoprefixer from "autoprefixer";
+import csso from "postcss-csso";
+import htmlmin from "gulp-htmlmin";
+import imagemin from "gulp-imagemin";
+import webp from "gulp-webp";
+import del from "del";
+import browser from "browser-sync";
 
 // Styles
 
-const styles = () => {
-  return gulp.src("source/sass/style.scss")
+export const styles = () => {
+  return gulp.src("source/sass/style.scss", { sourcemaps: true })
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
+    .pipe(gulp.dest("build/css", { sourcemaps: '.' }))
+    .pipe(browser.stream());
 }
-
-exports.styles = styles;
 
 // HTML
 
-const html = () => {
+export const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 }
 
-exports.html = html;
-
 // Image
 
-const images = () => {
+export const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({quality: 8, progressive: true}),
-      imagemin.svgo()
+      imagemin.svgo(
+        {
+          plugins: [
+            { optimizationLevel: 3 },
+            { progessive: true },
+            { interlaced: true },
+            { removeViewBox: false },
+            { removeUselessStrokeAndFill: false },
+            { cleanupIDs: false }
+         ]
+       }
+      )
     ]))
     .pipe(gulp.dest("build/img"));
 }
 
-exports.images = images;
-
 // Webp
 
-const createWebp = () => {
+export const createWebp = () => {
   return gulp.src("source/img/*.png")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("build/img"));
   }
 
-exports.createWebp = createWebp;
-
 // Clean build
 
-const clean = () => {
+export const clean = () => {
   return del("build");
 };
 
-exports.clean = clean;
-
 // Copy files
 
-const copy = (done) => {
+export const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
@@ -88,12 +89,10 @@ const copy = (done) => {
   done();
 }
 
-exports.copy = copy;
-
 // Server
 
-const server = (done) => {
-  sync.init({
+export const server = (done) => {
+  browser.init({
     server: {
       baseDir: 'build'
     },
@@ -104,12 +103,10 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
-
 // Reload
 
 const reload = (done) => {
-  sync.reload();
+  browser.reload();
   done();
 }
 
@@ -122,7 +119,7 @@ const watcher = () => {
 
 // Build
 
-const build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   images,
@@ -133,9 +130,7 @@ const build = gulp.series(
   )
 );
 
-exports.build = build;
-
-exports.default = gulp.series(
+export default gulp.series(
   clean,
   copy,
   images,

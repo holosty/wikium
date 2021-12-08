@@ -1,5 +1,6 @@
 .social-list {
   @include reset-list;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
