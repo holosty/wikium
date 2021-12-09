@@ -25,7 +25,7 @@ export const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("docs/css", { sourcemaps: '.' }))
+    .pipe(gulp.dest("build/css", { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -34,7 +34,7 @@ export const styles = () => {
 export const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("docs"));
+  .pipe(gulp.dest("build"));
 }
 
 // Image
@@ -42,7 +42,7 @@ export const html = () => {
 export const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 2}),
       imagemin.mozjpeg({quality: 8, progressive: true}),
       imagemin.svgo(
         {
@@ -57,7 +57,7 @@ export const images = () => {
        }
       )
     ]))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("build/img"));
 }
 
 // Webp
@@ -65,13 +65,13 @@ export const images = () => {
 export const createWebp = () => {
   return gulp.src("source/img/*.png")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("docs/img"));
+  .pipe(gulp.dest("build/img"));
   }
 
-// Clean docs
+// Clean build
 
 export const clean = () => {
-  return del("docs");
+  return del("build");
 };
 
 // Copy files
@@ -85,7 +85,7 @@ export const copy = (done) => {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("docs"))
+  .pipe(gulp.dest("build"))
   done();
 }
 
@@ -122,22 +122,22 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copy,
+  createWebp,
   images,
   gulp.parallel(
     html,
-    styles,
-    createWebp
+    styles
   )
 );
 
 export default gulp.series(
   clean,
   copy,
+  createWebp,
   images,
   gulp.parallel(
     styles,
-    html,
-    createWebp
+    html
   ),
   gulp.series(
     server,
